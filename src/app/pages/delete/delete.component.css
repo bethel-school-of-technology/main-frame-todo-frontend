@@ -1,0 +1,69 @@
+.container{
+    display: flex;
+    background-color: rgb(2, 19, 255);
+    align-items: stretch;
+    align-self:stretch;
+    height: 30em;
+    border-radius: 15px;
+    border-color: ivory;
+    border-style: solid;
+    margin-top: 15em;
+    
+   
+      
+}
+h1{
+    flex-wrap: wrap;
+    display: inline-flex;
+    align-items: flex-start;
+}
+.list-manager.row{
+    background-color: rgb(2, 19, 255);
+    flex-wrap: wrap;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: ivory;
+    
+    
+}
+
+.tasks-manager{
+   display: flex;
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+   background-color: rgb(2, 19, 255);
+    border-radius: 5px;
+    border-style: groove;
+    border-color: ivory;
+    
+}
+nav{
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    margin-top: 9em;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: ivory;
+    
+    
+    
+    
+}
+
+button{
+    
+    background-color: ivory;
+    font-weight: lighter;
+    font-family: fantasy;
+    padding-top: 5px;
+    
+    
+
+}
+.tasks-button{
+    justify-content: flex-end;
+    margin-top: 20em;
+    margin-left: 20em;
+    
+}
