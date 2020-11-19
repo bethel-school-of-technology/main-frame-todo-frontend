@@ -9,22 +9,24 @@ import { TasksDataService } from '../tasks-data.service';
 })
 export class TodoComponent implements OnInit {
 
+  users: any[];
+  tasks: any[];
+
   constructor(private tasksDataService: TasksDataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params.subscribe(
       (params: Params) => {
-        this.getTasks();
+        console.log(params);
+        this.tasksDataService.getTasks(params.userId).subscribe((tasks: any[]) => {
+          this.tasks = tasks;
+
+        })
       }
     )
-    } 
-  getTasks(){
-    this.tasksDataService.getTasks().subscribe(()=>{
-    });
-  }
-  createNewList() {
-    this.tasksDataService.createTask('testing').subscribe(() => {
 
+    this.tasksDataService.getUsers().subscribe((users: any[]) => {
+      this.users = users;
     })
   }
 }

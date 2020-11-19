@@ -8,12 +8,12 @@
 <body>
 
     <header>
-        
+
     </header>
     <div class="container">
         <div class="list-manager row">
             <div class="lists col-lg-4">
-                
+
                 <nav>
                     <button routerLink="/home">Home</button>
                     <button routerLink="/add">Add</button>
@@ -27,10 +27,13 @@
                 <h1>To-Do-List</h1>
                 <h1>Home</h1>
                 <ul>
-                    <a >
-                        <p></p>
+                    <a class="users" *ngFor="let user of users" [routerLink]="['/users', user._id]">
+                        <p>{{user.title}}</p>
+                        <div class="tasks" *ngFor="let task of tasks">
+                            <p>{{task.title}}</p>
+                        </div>
                     </a>
-                    <button cass="tasks-button">+ new Tasks</button>
+
                 </ul>
             </div>
         </div>

@@ -31,7 +31,7 @@ h1{
    display: flex;
    justify-content: space-evenly;
    flex-wrap: wrap;
-   background-color: rgb(2, 19, 255);
+   background-color:white;
     border-radius: 5px;
     border-style: groove;
     border-color: ivory;

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { TasksDataService } from 'src/app/tasks-data.service';
+import { User } from 'src/app/models/user.model';
 
 @Component({
   selector: 'app-add',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddComponent implements OnInit {
 
-  constructor() { }
+  constructor(private taskDataService: TasksDataService, private router: Router, private route: ActivatedRoute) { }
 
-  ngOnInit(): void {
+  
+
+  ngOnInit(){
+    
   }
+createUser(title: string) {
+  this.router.navigate(['home'])
+  this.taskDataService.createUser(title).subscribe((user: User)=>{
+  
+  });
+}
 
 }

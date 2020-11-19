@@ -1,23 +1,29 @@
-import {Injectable} from '@angular/core';
-import { WebrequestService} from './webrequest.service';
+import { Injectable } from '@angular/core';
+import { WebrequestService } from './webrequest.service';
 
 
 
 
 @Injectable({
-    providedIn:'root'
+    providedIn: 'root'
 })
 export class TasksDataService {
-    getTasks() {
-        return this.webRequestService.getTasks('tasks');
-    }
 
-    constructor(private webRequestService: WebrequestService){}
+    constructor(private webRequestService: WebrequestService) { }
 
-    createTask(title: string){
-       return this.webRequestService.addTasks('user', { title });
+    createUser(title: string) {
+        return this.webRequestService.post('user', { title });
     }
-    getLists(){
+    
+
+    getUsers() {
         return this.webRequestService.get('user');
     }
+
+    getTasks(userId: string) {
+        return this.webRequestService.get(`user/$(userId)/tasks`);
+    }
+    createTask(title: string, userId: string){
+        return this.webRequestService.post(`user/$(userId)/tasks`,{title})
+            }
 }

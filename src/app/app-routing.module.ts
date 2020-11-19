@@ -10,6 +10,9 @@ import { TodoComponent } from './todo/todo.component';
 const routes: Routes = [
   {path:"", redirectTo:"home", pathMatch:"full"},
   {path: "home", component: TodoComponent},
+  {path: "home/:userId", component:TodoComponent},
+  {path: "users/:userId", component:TodoComponent},
+  {path: "users/:userId/new-task", component:AddComponent},
   {path: "add", component: AddComponent},
   {path: "delete", component: DeleteComponent}, 
   {path: "update", component: UpdateComponent},
