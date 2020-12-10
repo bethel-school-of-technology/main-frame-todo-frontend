@@ -14,16 +14,22 @@ export class TasksDataService {
     createUser(title: string) {
         return this.webRequestService.post('user', { title });
     }
-    
+    deleteUser(id: string){
+        return this.webRequestService.delete(`user/${id}`);
+    }
+
+    updateUser(id:string, title: string){
+        return this.webRequestService.patch(`user/${id}`,{title});
+    }
 
     getUsers() {
         return this.webRequestService.get('user');
     }
 
     getTasks(userId: string) {
-        return this.webRequestService.get(`user/$(userId)/tasks`);
+        return this.webRequestService.get(`user/${userId}/task`);
     }
     createTask(title: string, userId: string){
-        return this.webRequestService.post(`user/$(userId)/tasks`,{title})
+        return this.webRequestService.post(`user/${userId}/task`,{title})
             }
 }

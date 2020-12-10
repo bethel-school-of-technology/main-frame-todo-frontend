@@ -67,3 +67,6 @@ button{
     margin-left: 20em;
     
 }
+.tasks{
+    justify-content: end;
+}

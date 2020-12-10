@@ -31,7 +31,7 @@ h1{
    display: flex;
    justify-content: space-evenly;
    flex-wrap: wrap;
-   background-color: white;
+   background-color:white;
     border-radius: 5px;
     border-style: groove;
     border-color: ivory;
@@ -62,16 +62,8 @@ button{
 
 }
 .tasks-button{
-    margin-top: 15px;
+    justify-content: flex-end;
+    margin-top: 20em;
+    margin-left: 20em;
     
-}
-.add-inputs{
-    display: flex;
-    align-content: flex-end;
-}
-form{
-    
-    justify-items: left;
-    height: auto;
-    width: auto;
 }

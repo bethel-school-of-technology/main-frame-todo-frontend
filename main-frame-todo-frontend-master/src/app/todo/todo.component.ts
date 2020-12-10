@@ -24,6 +24,7 @@ export class TodoComponent implements OnInit {
         })
       }
     )
+    
 
     this.tasksDataService.getUsers().subscribe((users: any[]) => {
       this.users = users;

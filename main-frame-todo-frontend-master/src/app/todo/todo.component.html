@@ -28,10 +28,12 @@
                 <h1>Home</h1>
                 <ul>
                     <a class="users" *ngFor="let user of users" [routerLink]="['/users', user._id]">
-                        <p>{{user.title}}</p>
-                        
-                        
+                            <p>{{ user.title }}</p>
                     </a>
+                    <a class="tasks" *ngFor="let task of tasks">
+                        <p>{{ task.title }}</p>
+                    </a>
+                    
 
                 </ul>
             </div>
